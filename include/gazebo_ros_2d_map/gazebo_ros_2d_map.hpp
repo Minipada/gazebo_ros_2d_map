@@ -1,29 +1,29 @@
 #ifndef GAZEBO_2DMAP_PLUGIN_H
 #define GAZEBO_2DMAP_PLUGIN_H
 
+#include <math.h>
+#include <octomap/octomap.h>
+
 #include <chrono>
 #include <functional>
-#include <iostream>
-#include <math.h>
-#include <memory>
-
-#include <gazebo/common/common.hh>
-#include <gazebo/gazebo.hh>
 #include <gazebo/common/CommonTypes.hh>
 #include <gazebo/common/Time.hh>
-#include <gazebo/physics/physics.hh>
+#include <gazebo/common/common.hh>
+#include <gazebo/gazebo.hh>
 #include <gazebo/physics/PhysicsTypes.hh>
+#include <gazebo/physics/physics.hh>
 #include <gazebo_ros/node.hpp>
 #include <ignition/math/Vector3.hh>
-#include <octomap/octomap.h>
+#include <iostream>
+#include <memory>
 #include <sdf/sdf.hh>
 
-#include "std_srvs/srv/empty.hpp"
-#include "nav_msgs/msg/occupancy_grid.hpp"
-#include "nav2_costmap_2d/costmap_2d_ros.hpp"
-#include "rclcpp/rclcpp.hpp"
-#include "rclcpp/macros.hpp"
 #include "gazebo_ros_2d_map/common.h"
+#include "nav2_costmap_2d/costmap_2d_ros.hpp"
+#include "nav_msgs/msg/occupancy_grid.hpp"
+#include "rclcpp/macros.hpp"
+#include "rclcpp/rclcpp.hpp"
+#include "std_srvs/srv/empty.hpp"
 
 using namespace std::chrono_literals;
 
