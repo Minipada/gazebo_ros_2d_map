@@ -9,11 +9,9 @@ set(dependencies
   gazebo_msgs
   gazebo_dev
   gazebo_ros
-  gazebo_ros2_control
   gazebo_plugins
   pluginlib
   nav_msgs
-  nav2_msgs
   rclcpp
   std_srvs
   nav2_costmap_2d
