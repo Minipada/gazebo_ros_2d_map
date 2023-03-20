@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gazebo_ros_2d_map"
+version = "0.1.0"
+description = ""
+authors = ["David Bensoussan <d.bensoussan@proton.me>"]
+license = "MPL-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.11.0"
+pre-commit = "^3.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
