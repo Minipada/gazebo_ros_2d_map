@@ -1,0 +1,56 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-merge-conflict
+        name: Check that merge conflicts are not being committed
+      - id: debug-statements
+        name: Detect accidentally committed debug statements
+      - id: check-builtin-literals
+        name: Require literal syntax when initializing Python builtin types
+      - id: detect-private-key
+        name: Detect if private key is added to the repository
+      - id: check-added-large-files
+        name: Detect if giant files are added
+      - id: check-docstring-first
+        name: Checks for a common error of placing code before the docstring
+      - id: check-executables-have-shebangs
+        name: Check that executables have shebang
+      - id: check-shebang-scripts-are-executable
+        name: Checks that scripts with shebangs are executable
+      - id: check-json
+        name: Verify json syntax
+      - id: check-yaml
+        name: Verify yaml syntax
+      - id: check-toml
+        name: Verify toml syntax
+      - id: check-xml
+        name: Check XML files with xmllint
+      - id: name-tests-test
+        name: Assert that files in tests/ end in _test.py
+      - id: mixed-line-ending
+        name: Detect if mixed line ending is used (\r vs. \r\n)
+      - id: end-of-file-fixer
+        name: Make sure that there is an empty line at the end
+        exclude: "(.*.pgm|.*.dae|.*.sdf|.*.config|.*.svg|.*.mtl)"
+      - id: trailing-whitespace
+        name: Remove trailing whitespace at end of line
+      - id: fix-encoding-pragma
+        name: Remove encoding header from python files
+        args: ["--remove"]
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.0
+    hooks:
+      - id: codespell
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v15.0.7
+    hooks:
+      - id: clang-format
+  - repo: https://github.com/asottile/yesqa
+    rev: v1.4.0
+    hooks:
+      - id: yesqa
+        name: Remove unnecessary noqa statements
+        exclude: |
+          (?x)
+        additional_dependencies: ["flake8>=4.0.1"]
