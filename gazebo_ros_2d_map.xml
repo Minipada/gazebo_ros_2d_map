@@ -1,0 +1,7 @@
+<library path="gazebo_ros_2d_map">
+  <class name="gazebo_ros_2d_map/OccupancyMapFromWorld" type="gazebo_ros_2d_map::OccupancyMapFromWorld">
+    <description>
+      Gazebo world to 2d map
+    </description>
+  </class>
+</library>
